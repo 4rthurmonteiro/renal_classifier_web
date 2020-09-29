@@ -13,13 +13,13 @@ class Classify extends Entity{
   int pcc;
   int ba;
   double bgr;
-  int bu;
+  double bu;
   double sc;
-  int sod;
+  double sod;
   double pot;
   double hemo;
-  int pcv;
-  int wbcc;
+  double pcv;
+  double wbcc;
   double rbcc;
   int htn;
   int dm;

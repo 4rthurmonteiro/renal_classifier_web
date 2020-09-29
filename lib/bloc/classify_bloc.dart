@@ -66,7 +66,7 @@ class ClassifyBloc extends BlocBase {
   }
 
   void saveBu(String bu) {
-    unsavedData.bu = int.parse(bu);
+    unsavedData.bu = double.parse(bu);
   }
 
   void saveSc(String sc) {
@@ -74,7 +74,7 @@ class ClassifyBloc extends BlocBase {
   }
 
   void saveSod(String sod) {
-    unsavedData.sod = int.parse(sod);
+    unsavedData.sod = double.parse(sod);
   }
 
   void savePot(String pot) {
@@ -86,11 +86,11 @@ class ClassifyBloc extends BlocBase {
   }
 
   void savePcv(String pcv) {
-    unsavedData.pcv = int.parse(pcv);
+    unsavedData.pcv = double.parse(pcv);
   }
 
   void saveWbcc(String wbcc) {
-    unsavedData.wbcc = int.parse(wbcc);
+    unsavedData.wbcc = double.parse(wbcc);
   }
 
   void saveRbcc(String rbcc) {
