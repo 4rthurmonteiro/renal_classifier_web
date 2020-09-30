@@ -22,6 +22,7 @@ class ClassifyBloc extends BlocBase {
   ClassifyBloc() {
     _createdController.add(false);
 
+    unsavedData.bp = 10;
     _dataController.add(unsavedData);
   }
 

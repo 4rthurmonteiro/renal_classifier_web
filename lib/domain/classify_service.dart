@@ -16,9 +16,9 @@ class ClassifyService {
 
     String json = classify.toJson();
 
-    final response = await http.post(url, headers: headers, body: json);
 
-//    print(response.body);
+    final response = await http.post(url, headers: headers, body: json);
+    print(response.body);
 
     if (response.statusCode == 200) {
       Map mapResponse = convert.json.decode(response.body);

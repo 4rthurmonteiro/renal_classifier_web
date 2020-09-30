@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:renal_classifier_web/bloc/classify_bloc.dart';
+import 'package:renal_classifier_web/utils/alerts.dart';
 import 'package:renal_classifier_web/utils/navbar.dart';
 import 'package:renal_classifier_web/utils/responsive_layout.dart';
 import 'package:renal_classifier_web/validators/classify_validators.dart';
@@ -1125,7 +1126,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       ));
 
       if (success.ok) {
-        print(success.msg);
+        alert(context, success.msg, success.msg);
       }else{
         print(success.msg);
       }
