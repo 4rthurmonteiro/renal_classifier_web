@@ -120,6 +120,23 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
                                   primaryColorDark: Colors.black87),
                             ),
                           ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Theme(
+                              child: TextFormField(
+                                validator: validateBp,
+                                cursorColor: Colors.black87,
+                                maxLines: 1,
+                                style: _fieldStyle,
+                                onSaved: _classifyBloc.saveBp,
+                                decoration: _buildDecoration("Pressão arterial (em mmHg)"),
+                                textCapitalization: TextCapitalization.sentences,
+                              ),
+                              data: ThemeData(
+                                  primaryColor: Colors.black26,
+                                  primaryColorDark: Colors.black87),
+                            ),
+                          ),
                           Row(
                             children: [
                               Padding(
@@ -771,7 +788,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _rbc,
           onChanged: _onClickRbcType,
         ),
@@ -780,7 +797,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _rbc,
           onChanged: _onClickRbcType,
         ),
@@ -797,7 +814,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _pc,
           onChanged: _onClickPcType,
         ),
@@ -806,7 +823,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _pc,
           onChanged: _onClickPcType,
         ),
@@ -823,7 +840,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _pcc,
           onChanged: _onClickPccType,
         ),
@@ -832,7 +849,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _pcc,
           onChanged: _onClickPccType,
         ),
@@ -849,7 +866,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _ba,
           onChanged: _onClickBaType,
         ),
@@ -858,7 +875,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _ba,
           onChanged: _onClickBaType,
         ),
@@ -875,7 +892,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _htn,
           onChanged: _onClickHtnType,
         ),
@@ -884,7 +901,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _htn,
           onChanged: _onClickHtnType,
         ),
@@ -901,7 +918,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _dm,
           onChanged: _onClickDmType,
         ),
@@ -910,7 +927,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _dm,
           onChanged: _onClickDmType,
         ),
@@ -927,7 +944,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _cad,
           onChanged: _onClickCadType,
         ),
@@ -936,7 +953,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _cad,
           onChanged: _onClickCadType,
         ),
@@ -953,7 +970,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _appet,
           onChanged: _onClickAppetType,
         ),
@@ -962,7 +979,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _appet,
           onChanged: _onClickCadType,
         ),
@@ -979,7 +996,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _pe,
           onChanged: _onClickPeType,
         ),
@@ -988,7 +1005,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _pe,
           onChanged: _onClickPeType,
         ),
@@ -1005,7 +1022,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Radio(
-          value: 0, // 1.005
+          value: 1, // 1.005
           groupValue: _ane,
           onChanged: _onClickAneType,
         ),
@@ -1014,7 +1031,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
           style: TextStyle(color: Colors.black87, fontSize: 15),
         ),
         Radio(
-          value: 1,
+          value: 0,
           groupValue: _ane,
           onChanged: _onClickAneType,
         ),
@@ -1126,7 +1143,7 @@ class _HomePageState extends State<HomePage> with ClassifyValidators {
       ));
 
       if (success.ok) {
-        alert(context, success.msg, success.msg);
+        alert(context, 'Resultado', success.msg);
       }else{
         print(success.msg);
       }

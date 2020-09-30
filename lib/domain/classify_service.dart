@@ -23,9 +23,11 @@ class ClassifyService {
     if (response.statusCode == 200) {
       Map mapResponse = convert.json.decode(response.body);
 
+      String pred = mapResponse['prediction'];
 
+      String predicition = pred.contains("1") ? 'Problema renal detectado' : 'Nenhum problema renal detectado';
 
-      return ApiResponse.ok(msg: 'Resultado é : ${mapResponse['prediction']}');
+      return ApiResponse.ok(msg: '$predicition');
     }
 
     return ApiResponse.error();
